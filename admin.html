@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Admin Page</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Raleway:ital@0;1&family=Roboto+Slab&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/all.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <!-- Start Header -->
+        <header class="header">
+            <div class="container">
+                <nav class="nav">
+                    <a class="title" href="index.html">Shopping Cart</a>
+                    <ul class="list">
+                        <li><a href="login.html">Sign in</a></li>
+                        <li><a href="register.html">Sign up</a></li>
+                    </ul>
+                    <div class="user-container">
+                        <ul id="loginUser">
+                            <li>
+                                <span class="userName">User Name</span>
+                            </li>
+
+                            <li id="logoutAdmin">
+                                <a href="#">Log Out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="loading">
+                <span class="loading-span"></span>
+            </div>
+        </header>
+        <!-- End Header -->
+        <section class="admin">
+            <div class="container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name:</th>
+                            <th>Email:</th>
+                            <th>Favorites:</th>
+                            <th>Products:</th>
+                            <th>Date:</th>
+                            <th>Remove:</th>
+                        </tr>
+                    </thead>
+
+                    <tbody class="admin-container"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <script src="js/product.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/admin.js"></script>
+    </body>
+</html>

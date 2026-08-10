@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cart Menu Page</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Raleway:ital@0;1&family=Roboto+Slab&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/all.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <!-- Start Header -->
+        <header class="header">
+            <div class="container">
+                <nav class="nav">
+                    <a class="title" href="index.html">Shopping Cart</a>
+                    <ul class="list">
+                        <li><a href="login.html">Sign in</a></li>
+                        <li><a href="register.html">Sign up</a></li>
+                    </ul>
+                    <i id="burger-icon" class="fa-solid fa-bars"></i>
+
+                    <ul class="loginUser">
+                        <li>
+                            <i class="user_icon fa fa-user-circle"></i>
+                            <span class="userName">User Name</span>
+                        </li>
+                        <li id="favorite">
+                            <a class="favorite-link" href="#">Favorite</a>
+                        </li>
+                        <li id="logout">
+                            <a href="#">Log Out</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="loading">
+                <span class="loading-span"></span>
+            </div>
+        </header>
+        <!-- End Header -->
+        <!-- Start Cart Menu -->
+        <section id="productInCartMenu">
+            <div class="container">
+                <div class="cart-menu-content"></div>
+            </div>
+        </section>
+        <section>
+            <div class="pay">
+                <button class="pay-btn">Payment</button>
+            </div>
+            <div class="pay-popup">
+                <form class="pay-form" action="">
+                    <h2 class="pay-title">Payment</h2>
+                    <p class="pay-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    <label class="label" for="cardNumber">Card Number</label>
+                    <input class="inp" id="cardNumber" type="text" placeholder="Card Number...." />
+                    <div class="expiration">
+                        <div class="pay-left">
+                            <label class="label" for="exp">Expiration Date</label>
+                            <input class="inp" id="exp" type="text" placeholder="Expiration Date...." />
+                        </div>
+                        <div class="pay-right">
+                            <label class="label" for="cvc">CVC/CVV</label>
+                            <input class="inp" id="cvc" type="text" placeholder="CVC/CVV..." />
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button class="back">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            back
+                        </button>
+                        <button class="add-pay">Pay</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <div class="loading-pay">
+            <span>Loading</span>
+        </div>
+        <div class="poupep">
+            <div class="poupep-content">
+                <p class="poupep-desc">Please Fill Data.....</p>
+                <i id="poupep-icon" class="fa fa-times-circle"></i>
+            </div>
+        </div>
+        <!-- End Cart Menu -->
+        <script src="js/product.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/cartmenu.js"></script>
+    </body>
+</html>
