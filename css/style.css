@@ -6,8 +6,12 @@
 :root {
     --blackColor: #000;
     --whiteColor: #fff;
-    --shadowColor: #b81f53;
+    --shadowColor: #736aff;
     --pseudoColor: #673ab7;
+    --PrimaryColor: #e42217;
+    --TextColor: #ddd;
+    --MainColor: #f6358a;
+    --SecondColor: #348781;
 }
 body {
     font-family: "Roboto Slab", serif;
@@ -34,7 +38,7 @@ input {
 /* Start Header */
 .header {
     padding: 15px 0;
-    background-color: var(--blackColor);
+    background-color: var(--PrimaryColor);
     position: fixed;
     top: 0;
     left: 0;
@@ -83,7 +87,6 @@ input {
     display: none;
     cursor: pointer;
 }
-
 .header .nav ul.loginUser {
     display: flex;
     align-items: center;
@@ -109,7 +112,7 @@ input {
     position: relative;
 }
 #cart-icon-menu i:hover {
-    color: var(--shadowColor);
+    color: var(--blackColor);
 }
 #cart-icon-menu i .badge {
     color: var(--whiteColor);
@@ -117,14 +120,14 @@ input {
     top: -14px;
     right: -9px;
     font-size: 17px;
-    background-color: #795548;
+    background-color: var(--shadowColor);
     padding: 5px;
     border-radius: 50%;
     font-weight: bold;
 }
 .favorite-link {
     display: block;
-    color: #fff;
+    color: var(--whiteColor);
     font-size: 25px;
     padding: 0 20px;
 }
@@ -134,7 +137,7 @@ input {
     font-size: 25px;
     border: 1px solid var(--whiteColor);
     padding: 5px 15px;
-    background-color: #00695c;
+    background-color: var(--SecondColor);
     transition: all 0.3s;
 }
 #logout:hover,
@@ -155,7 +158,7 @@ input {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 1px solid #000;
+    background-color: var(--MainColor);
     padding: 20px;
     width: 40%;
 }
@@ -165,7 +168,12 @@ input {
     border-bottom: 2px solid #000;
     padding: 5px;
     margin-bottom: 15px;
+    background-color: transparent;
 }
+input::placeholder {
+    color: var(--whiteColor);
+}
+
 .register_pass,
 .login_pass {
     display: flex;
@@ -188,7 +196,7 @@ input {
 }
 .register_pass i#register_iconHide,
 #login_iconHide {
-    color: #f00;
+    color: #800517;
 }
 .register #register_btn,
 #login_btn {
@@ -196,10 +204,10 @@ input {
     margin: 10px auto;
     border: none;
     font-size: 20px;
-    border: 2px solid #000;
+    border: 2px solid var(--blackColor);
     padding: 10px 25px;
     cursor: pointer;
-    background-color: #000;
+    background-color: var(--blackColor);
     color: var(--whiteColor);
 }
 /* End Form */
@@ -226,7 +234,7 @@ input {
 .poupep p {
     color: var(--whiteColor);
     font-size: 30px;
-    color: #f00;
+    color: var(--PrimaryColor);
     letter-spacing: 3px;
 }
 #poupep-icon {
@@ -234,7 +242,7 @@ input {
     top: 10px;
     right: 10px;
     font-size: 25px;
-    color: #f00;
+    color: var(--PrimaryColor);
     cursor: pointer;
 }
 /* End Poupep */
@@ -254,7 +262,7 @@ input {
     width: 100px;
     height: 100px;
     border-width: 4px;
-    border-color: #00838f;
+    border-color: var(--SecondColor);
     border-style: solid solid dotted dotted;
     border-radius: 50%;
     animation: rotate-right 2s linear infinite;
@@ -292,7 +300,6 @@ input {
     justify-content: space-between;
     align-items: center;
     margin-top: 50px;
-    /* gap: 10px; */
     flex-wrap: wrap;
 }
 
@@ -315,7 +322,7 @@ input {
 }
 .items .box .image .icon-favorait {
     position: absolute;
-    background-color: #0097a7;
+    background-color: var(--MainColor);
     display: block;
     top: 0px;
     right: 0px;
@@ -326,7 +333,7 @@ input {
 .items .box .content {
     padding: 5px;
     text-align: center;
-    background-color: var(--blackColor);
+    background-color: var(--SecondColor);
     color: var(--whiteColor);
 }
 .items .box .content a {
@@ -338,6 +345,7 @@ input {
 .items .box .content p {
     font-size: 10px;
     margin-bottom: 10px;
+    color: var(--TextColor);
 }
 .items .box .content span {
     display: block;
@@ -351,7 +359,7 @@ input {
     cursor: pointer;
     font-size: 20px;
     font-weight: bold;
-    background: #00ffffb0;
+    background: var(--PrimaryColor);
     color: var(--whiteColor);
 }
 
@@ -359,10 +367,10 @@ input {
 /* Start Cart Menu */
 #cart-menu {
     position: fixed;
-    background-color: #9e9e9ecc;
+    background-color: rgba(0, 0, 0, 0.8);
     top: 70px;
-    right: -60%;
-    width: 60%;
+    right: -70%;
+    width: 70%;
     z-index: 5;
     height: calc(100vh - 70px);
     transition: 0.5s;
@@ -375,7 +383,7 @@ input {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--whiteColor);
+    background-color: var(--MainColor);
     margin: 15px 0;
     padding: 10px 0;
 }
@@ -397,17 +405,17 @@ input {
 }
 .cart-content h4 {
     font-size: 17px;
-    color: var(--pseudoColor);
+    color: var(--blackColor);
     font-weight: bold;
 }
 .cart-content p {
     font-size: 12px;
-    color: #757575;
+    color: var(--TextColor);
 }
 .cart-content span {
     font-size: 22px;
     font-weight: bold;
-    background-color: #9c27b0;
+    background-color: var(--shadowColor);
     color: var(--whiteColor);
     padding: 5px;
 }
@@ -420,7 +428,7 @@ input {
 .cart-btn button {
     padding: 5px;
     color: var(--whiteColor);
-    background-color: #00897b;
+    background-color: var(--SecondColor);
     cursor: pointer;
 }
 .no-drop {
@@ -444,7 +452,7 @@ input {
 }
 .cart-view {
     padding: 10px 0;
-    background-color: #2e7d32;
+    background-color: var(--SecondColor);
     text-align: center;
     margin: 10px 0;
 }
@@ -471,9 +479,9 @@ input {
     display: flex;
     justify-content: space-between;
     width: 47%;
-    border: 1px solid #ddd;
+    border: 1px solid var(--TextColor);
     padding: 10px;
-    box-shadow: 4px 4px 2px #552424;
+    box-shadow: 4px 4px 2px var(--MainColor);
 }
 .menu-cart-image {
     width: 35%;
@@ -488,14 +496,14 @@ input {
 .cart-menu-title h4 {
     font-size: 40px;
     font-weight: bold;
-    color: #37474f;
+    color: var(--PrimaryColor);
     margin-bottom: 30px;
     position: relative;
 }
 .cart-menu-title h4::before {
     content: "";
     position: absolute;
-    border: 2px solid #000;
+    border: 2px solid var(--blackColor);
     display: block;
     width: 100%;
     bottom: 0;
@@ -503,7 +511,7 @@ input {
 }
 .cart-menu-title p {
     font-size: 23px;
-    color: #ccc;
+    color: var(--TextColor);
     margin-bottom: 20px;
     line-height: 1.7;
 }
@@ -515,7 +523,7 @@ input {
 .cart-menu-title span {
     display: inline-block;
     font-size: 20px;
-    color: #4735b1;
+    color: var(--PrimaryColor);
     font-weight: bold;
 }
 .pay {
@@ -526,8 +534,8 @@ input {
 .pay-btn {
     font-size: 25px;
     font-weight: bold;
-    background-color: darkcyan;
-    color: white;
+    background-color: var(--SecondColor);
+    color: var(--whiteColor);
     width: 250px;
     padding: 15px 0;
     cursor: pointer;
@@ -548,7 +556,7 @@ input {
 .pay-form {
     width: 50%;
     padding: 10px;
-    background-color: #2196f3;
+    background-color: var(--MainColor);
     border-radius: 10px;
 }
 .pay-title {
@@ -569,7 +577,7 @@ input {
 .inp {
     padding: 10px;
     border: none;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid var(--blackColor);
     background-color: transparent;
     margin-bottom: 30px;
 }
@@ -604,7 +612,7 @@ input {
     margin-right: 5px;
 }
 .add-pay {
-    background-color: #9c27b0;
+    background-color: var(--pseudoColor);
     color: var(--whiteColor);
 }
 /* ENd Cart Menu Page */
@@ -613,9 +621,8 @@ input {
     margin-top: 80px;
 }
 .favorite-content {
-    background-color: #ddd;
+    background-color: var(--TextColor);
     padding: 20px;
-    /* display: block; */
 }
 .favorite-box {
     display: flex;
@@ -640,18 +647,18 @@ input {
 .favorite-title h3 {
     font-size: 35px;
     font-weight: bold;
-    color: #00695c;
+    color: var(--MainColor);
 }
 .favorite-title p {
     font-size: 20px;
-    color: #ccc;
+    color: var(--TextColor);
 }
 .favorite-noData {
     width: 100%;
-    background-color: var(--blackColor);
+    background-color: var(--MainColor);
     margin-top: 40px;
     padding: 40px;
-    color: #fff;
+    color: var(--whiteColor);
     font-size: 40px;
     display: none;
 }
@@ -659,7 +666,7 @@ input {
 /* Start User */
 .user-box {
     margin-top: 90px;
-    background-color: #ddd;
+    background-color: var(--TextColor);
     padding: 10px;
 }
 .user-box .content {
@@ -677,17 +684,17 @@ input {
 }
 .user-box .content h3 span {
     font-size: 30px;
-    color: var(--pseudoColor);
+    color: var(--MainColor);
 }
 .user-box p {
     margin-top: 30px;
-    background-color: #fff;
+    background-color: var(--whiteColor);
     padding: 20px;
     font-size: 30px;
 }
 .user-box p span {
     font-size: 35px;
-    color: darkgreen;
+    color: var(--MainColor);
 }
 .user-box .user-list {
     margin-top: 25px;
@@ -724,11 +731,11 @@ input {
 }
 .popupCartDesc {
     font-size: 35px;
-    color: red;
+    color: var(--MainColor);
     font-weight: bold;
 }
 .popupCartIcon {
-    color: red;
+    color: var(--MainColor);
     display: block;
     position: absolute;
     top: 10px;
@@ -802,11 +809,11 @@ td {
 }
 
 th {
-    background-color: #000;
-    color: #fff;
+    background-color: var(--blackColor);
+    color: var(--whiteColor);
     font-weight: bold;
     font-size: 20px;
-    border-bottom: 2px solid #b85270;
+    border-bottom: 2px solid var(--MainColor);
 }
 
 tr:nth-child(even) {
@@ -814,7 +821,7 @@ tr:nth-child(even) {
 }
 
 tr:nth-child(odd) {
-    background-color: #e9e9e9;
+    background-color: var(--MainColor);
 }
 
 td {
@@ -826,7 +833,7 @@ td:last-child {
     width: 100px;
 }
 #admin-remove {
-    color: black;
+    color: var(--blackColor);
     font-size: 25px;
     cursor: pointer;
 }
@@ -867,7 +874,7 @@ td:last-child {
         position: absolute;
         top: 100%;
         right: 0;
-        background-color: #000;
+        background-color: var(--blackColor);
         width: 100%;
         padding: 15px;
         z-index: 1000;
@@ -879,7 +886,7 @@ td:last-child {
     .header .nav ul.loginUser li {
         padding: 15px 0px !important;
         margin-bottom: 5px;
-        border-bottom: 1px solid #fff;
+        border-bottom: 1px solid var(--whiteColor);
         width: 100%;
         display: block;
     }

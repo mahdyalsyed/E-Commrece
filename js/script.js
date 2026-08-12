@@ -82,7 +82,7 @@ function drawItems() {
                         <div class="image">
                             <img src="${item.img}" alt="Photo" />
                             <i class="icon-favorait fa fa-heart"
-                               style= "color:${isFavorite ? "red" : "white"}"
+                               style= "color:${isFavorite ? "black" : "white"}"
                                onclick="handleFavorite(${item.id})">
                             </i>
                         </div>
@@ -133,7 +133,7 @@ function darwProductsUi() {
                         <div class="image">
                             <img src="${item.img}" alt="Photo" />
                             <i class="icon-favorait fa fa-heart" 
-                               style= "color:${isFavorite ? "red" : "white"}" 
+                               style= "color:${isFavorite ? "black" : "white"}" 
                                onclick="handleFavorite(${item.id})">
                             </i>
                         </div>
